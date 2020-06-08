@@ -20,6 +20,7 @@ public class UserInterface extends Application {
         Button counter = new Button("Counter");
         Button stopwatch = new Button("Stopwatch");
         Button clock = new Button("Clock");
+        Button note = new Button("Note");
 
 
         counter.setTranslateX(540);
@@ -28,6 +29,8 @@ public class UserInterface extends Application {
         stopwatch.setTranslateY(300);
         clock.setTranslateX(540);
         clock.setTranslateY(400);
+     note.setTranslateX(540);
+            note.setTranslateY(500);
 
         counter.setOnAction(actionEvent -> {
 
@@ -57,16 +60,23 @@ Stopwatch stopwatch1 = new Stopwatch();
 
         });
 
+ note.setOnAction(actionEvent -> {
+
+
+        });
+
 
 
         setStyle(counter);
         setStyle(stopwatch);
         setStyle(clock);
+        setStyle(note);
 
 
         counter.setPrefSize(220, 80);
         stopwatch.setPrefSize(220, 80);
         clock.setPrefSize(220, 80);
+        note.setPrefSize(220, 80);
 
 
         Button back = new Button("Back");
@@ -96,7 +106,7 @@ Stopwatch stopwatch1 = new Stopwatch();
         Canvas canvas = new Canvas(1400,800);
         Group group = new Group();
         group.getChildren().addAll(canvas,counter,clock,
-                stopwatch,exit,back);
+                stopwatch,exit,back,note);
 
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
         graphicsContext.drawImage(image,0,0);
