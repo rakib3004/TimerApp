@@ -260,7 +260,6 @@ int activityCounter=0;
             userInterface.start(primaryStage);
         });
         exit.setOnAction(actionEvent -> {
-
             String string = History1TextField.getText()+"\t"+
                     History2TextField.getText()+"\t"+
                     History3TextField.getText()+"\t"+
